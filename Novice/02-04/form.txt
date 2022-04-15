@@ -1,0 +1,41 @@
+//Contoh membuat form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="get()">
+    <p id="savedText"> </p>
+<p id="openedText"> </p>  
+
+<input type="text" id="input"/>
+<button onClick="save()"> SAVE </button>
+
+</body>
+
+<script>
+    
+    var storedItem = localStorage.getItem("storedItem");
+
+    function save (){
+
+        var Item = document.getELementById("input").value;
+        localStorage.setItem("storedItem", Item);
+        document.getElementsById("savedText").innerHTML = Item + " SAVED";
+
+    }
+    function get(){
+        localStorage.getItem("storedItem");
+        document.getElementById("openedText").innerHTML = storedItem + " OPENED";
+
+
+    }
+    <script> -->
+<!-- 
+</body>
+</html>
